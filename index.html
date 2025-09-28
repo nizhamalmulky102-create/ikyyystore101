@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Meta dasar -->
+  <link rel="icon" type="jpg" href="avatar.jpg">
+
+  <!-- Font Awesome untuk icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IkyyyStore - Toko aplikasi premium, suntik sosmed, dan topup game terpercaya.">
+  <meta name="author" content="IkyyyStore">
+
+  <title>IkyyyStore</title>
+  <link rel="icon" type="image/x-icon" href="avatar.jpg">
+
+  <!-- Style internal -->
+  <style>
+    body {
+      background:#0f0f0f;
+      color:#fff;
+      font-family:"Segoe UI",sans-serif;
+      margin:0
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+    header{background:#1a1a1a;padding:15px 0;border-bottom:1px solid #333;position:sticky;top:0;z-index:100}
+    .header-content{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .avatar{width:45px;height:45px;border-radius:50%;overflow:hidden;border:2px solid #87ceeb;display:flex;align-items:center;justify-content:center}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .store-name{color:#87ceeb;font-size:22px;font-weight:700}
+    .store-subtitle{color:#cfcfcf;font-size:12px}
+    .search-bar{background:#333;border-radius:25px;padding:10px 16px;flex:1;max-width:400px;display:flex;align-items:center;gap:8px}
+    .search-bar i{color:#aaa}
+    .search-bar input{background:transparent;border:none;outline:none;color:#fff;flex:1;font-size:15px}
+    .nav-menu{display:flex;align-items:center;gap:15px}
+    .nav-categories{display:flex;flex-wrap:wrap;gap:10px}
+    .nav-categories button{background:none;border:none;color:#aaa;padding:8px 12px;border-radius:6px;cursor:pointer}
+    .nav-categories button.active,.nav-categories button:hover{color:#fff;background:#7B3AEC22;border:1px solid #7B3AEC44}
+    .btn-login,.btn-app{padding:8px 14px;border-radius:6px;cursor:pointer}
+    .btn-login{border:1px solid #fff;background:none;color:#fff}
+    .btn-app{border:none;background:#7B3AEC;color:#fff}
+    main{padding:25px 0}
+    .category-title{margin-bottom:15px;font-size:20px;border-left:4px solid #7B3AEC;padding-left:10px}
+    .apps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+    .app-card{background:#1c1c1c;border-radius:12px;padding:16px;text-align:center;transition:.2s}
+    .app-card:hover{transform:translateY(-4px);box-shadow:0 6px 20px rgba(0,0,0,0.5)}
+    .app-icon{width:70px;height:70px;border-radius:12px;overflow:hidden;margin:0 auto 8px;background:#222}
+    .app-icon img{width:100%;height:100%;object-fit:cover}
+    .app-name{font-size:16px;font-weight:600}
+    .app-category{font-size:13px;color:#bbb;margin-bottom:8px}
+    .app-actions{display:flex;gap:10px}
+    .btn-open{flex:1;background:#7B3AEC;color:#fff;border:none;border-radius:6px;padding:8px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+    .btn-detail{flex:1;background:none;border:1px solid #666;color:#ccc;border-radius:6px;padding:8px;cursor:pointer}
+
+    /* === Footer Baru === */
+    footer {
+      background-color: #1c1c1c;
+      padding: 40px 20px 20px;
+      margin-top: 30px;
+      font-family: "Poppins", sans-serif;
+      color: #ffffff;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .footer-col {
+      flex: 1 1 250px;
+      min-width: 220px;
+    }
+
+    .footer-col h3 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #ffffff;
+    }
+
+    .footer-col p {
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .footer-col ul li a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .footer-col ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .copyright {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #ffffff;
+      border-top: 1px solid #ffffff;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <div class="avatar">
+          <img src="avatar.jpg" alt="IkyyyStore Logo"/>
+        </div>
+        <div>
+          <div class="store-name">IkyyyStore</div>
+          <div class="store-subtitle">Toko Aplikasi premium, suntik dan topup</div>
+        </div>
+      </div>
+      <div class="search-bar"><i class="fas fa-search"></i><input type="text" placeholder="Cari produk..."></div>
+      <div class="nav-menu">
+        <div class="nav-categories">
+          <button class="active">Semua</button>
+          <button>Desain</button>
+          <button>Musik & Video</button>
+          <button>Suntik Sosmed</button>
+          <button>Topup Game</button>
+        </div>
+        <div class="nav-buttons">
+          <a href="gabut" class="btn-login">Login</a>
+          <button class="btn-app">Aplikasi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Premium -->
+  <section>
+    <h2 class="category-title"><i class="fas fa-crown"></i> Premium</h2>
+    <div class="apps-grid">
+      <div class="app-card"><div class="app-icon"><img src="alight motion.jpg"></div><div class="app-name">Alight Motion</div><div class="app-category">Desain</div><div class="app-actions"><a href="alight motion.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="canva.jpg"></div><div class="app-name">Canva</div><div class="app-category">Desain</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="capcut.jpg"></div><div class="app-name">CapCut</div><div class="app-category">Desind & Video</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="spotify.jpg"></div><div class="app-name">Spotify</div><div class="app-category">Musik</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="netflix.jpg"></div><div class="app-name">Netflix</div><div class="app-category">Video</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="youtube.jpg"></div><div class="app-name">YouTube</div><div class="app-category">Video</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+    </div>
+  </section>
+
+  <!-- Suntik Sosmed -->
+  <section>
+    <h2 class="category-title"><i class="fas fa-users"></i> Suntik Sosmed</h2>
+    <div class="apps-grid">
+      <div class="app-card"><div class="app-icon"><img src="Instagram - Apps on Google Play.jpg"></div><div class="app-name">Suntik Instagram</div><div class="app-category">Social Media</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="tiktok.jpg"></div><div class="app-name">Suntik TikTok</div><div class="app-category">Social Media</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="youtube.jpg"></div><div class="app-name">Suntik YouTube</div><div class="app-category">Social Media</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="telegram.jpg"></div><div class="app-name">Suntik Telegram</div><div class="app-category">Messaging</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+    </div>
+  </section>
+
+  <!-- Topup Game -->
+  <section>
+    <h2 class="category-title"><i class="fas fa-gamepad"></i> Topup Game</h2>
+    <div class="apps-grid">
+      <div class="app-card"><div class="app-icon"><img src="mobile legend.jpg"></div><div class="app-name">Mobile Legends</div><div class="app-category">Game</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="roblox.jpg"></div><div class="app-name">Roblox</div><div class="app-category">Game</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="free fire.jpg"></div><div class="app-name">Free Fire</div><div class="app-category">Game</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+      <div class="app-card"><div class="app-icon"><img src="genshin impact.jpg"></div><div class="app-name">Genshin Impact</div><div class="app-category">Game</div><div class="app-actions"><a href="order.html" target="_blank" class="btn-open">Buka</a><button class="btn-detail">Detail</button></div></div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer Baru -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h3>Tentang</h3>
+      <p>
+        IkyyyStore adalah penyedia layanan aplikasi premium,suntik dan top-up game terpercaya dengan layanan cepat dan aman.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Kontak</h3>
+      <ul>
+        <li>📧 Email: apa we kepo</li>
+        <li>📞 Telepon: +6285817340161</li>
+        <li>📍 Lokasi: Indonesia</li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Lainnya</h3>
+      <ul>
+        <li><a href="#">Kebijakan Privasi</a></li>
+        <li><a href="#">Syarat & Ketentuan</a></li>
+        <li><a href="#">Bantuan</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">
+    &copy; 2025 IkyyyStore.com All rights reserved.
+  </div>
+</footer>
+
+<!-- Script untuk filter kategori & search -->
+<script>
+const searchInput=document.querySelector('.search-bar input');
+const appCards=document.querySelectorAll('.app-card');
+const categoryButtons=document.querySelectorAll('.nav-categories button');
+let selectedCategory='semua';
+const normalize=s=>(s||'').toLowerCase();
+
+function applyFilters(){
+  const query=normalize(searchInput.value);
+  appCards.forEach(card=>{
+    const name=normalize(card.querySelector('.app-name').textContent);
+    const cat=normalize(card.querySelector('.app-category').textContent);
+    let matchCategory=true;
+    if(selectedCategory==='desain'){matchCategory=cat.includes('desain')}
+    else if(selectedCategory==='musik & video'){matchCategory=cat.includes('musik')||cat.includes('video')}
+    else if(selectedCategory==='suntik sosmed'){matchCategory=cat.includes('social')||cat.includes('messaging')}
+    else if(selectedCategory==='topup game'){matchCategory=cat.includes('game')}
+    const matchName=!query||name.includes(query);
+    card.style.display=(matchCategory&&matchName)?'':'none';
+  });
+}
+searchInput.addEventListener('input',applyFilters);
+categoryButtons.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    categoryButtons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedCategory=normalize(btn.textContent);
+    applyFilters();
+  });
+});
+applyFilters();
+</script>
+
+</body>
+</html>
